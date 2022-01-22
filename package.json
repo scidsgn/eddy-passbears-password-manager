@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "name": "remix-app-template",
+  "description": "",
+  "license": "",
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev",
+    "postinstall": "remix setup node",
+    "start": "remix build && node server"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.7.0",
+    "@remix-run/express": "^1.1.1",
+    "@remix-run/react": "^1.1.1",
+    "@remix-run/serve": "^1.1.1",
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.2",
+    "geoip-lite": "^1.4.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remix": "^1.1.1",
+    "request-ip": "^2.1.3",
+    "ua-parser-js": "^1.0.2",
+    "zxcvbn": "^4.4.2"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.1.1",
+    "@types/bcrypt": "^5.0.0",
+    "@types/geoip-lite": "^1.4.1",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "@types/request-ip": "^0.0.37",
+    "@types/ua-parser-js": "^0.7.36",
+    "@types/zxcvbn": "^4.4.1",
+    "esbuild-register": "^3.2.1",
+    "prisma": "^3.7.0",
+    "typescript": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "sideEffects": false
+}
