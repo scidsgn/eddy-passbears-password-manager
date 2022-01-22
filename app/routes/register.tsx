@@ -52,6 +52,14 @@ export const action: ActionFunction = async ({request}) => {
         })
     }
 
+    const existingUser = await getUserByEmail(email)
+    if (existingUser) {
+        return bad({
+            fields,
+            error: `Email already in use by another account.`
+        })
+    }
+
     if (password !== passwordRepeat) {
         return bad({
             fields,
@@ -64,12 +72,23 @@ export const action: ActionFunction = async ({request}) => {
             error: "Master password and its repeat don't match."
         })
     }
-
-    const existingUser = await getUserByEmail(email)
-    if (existingUser) {
+    if (masterPassword === password) {
         return bad({
             fields,
-            error: `Email already in use.`
+            error: "Password and master password must not be identical."
+        })
+    }
+
+    if (password.length < 8) {
+        return bad({
+            fields,
+            error: "Password must be at least 8 characters long."
+        })
+    }
+    if (masterPassword.length < 8) {
+        return bad({
+            fields,
+            error: "Master password must be at least 8 characters long."
         })
     }
 
