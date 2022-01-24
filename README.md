@@ -10,5 +10,5 @@ Eddy can't wait to help you store your passwords, all you gotta do is follow the
 
 * Install all the required packages with `npm install`.
 * Create a `.env` based on the template, remember to add the necessary certificate data for HTTPS!
-* Use `npx prisma db pull` and `npx prisma generate` to get your database and client ready to go!
+* Use `npx prisma db push` and `npx prisma generate` to get your database and client ready to go!
 * Run `npm start` and be amazed as Eddy appears on your computer screen as you enter the URL in your browser!
